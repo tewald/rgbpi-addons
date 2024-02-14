@@ -1,5 +1,4 @@
 from pygame_menu.examples import create_example_window
-
 import pygame
 import pygame_menu
 import os
@@ -7,6 +6,8 @@ import shutil
 
 from utils import is_raspberrypi
 from retroarch_settings import get_retroarch_settings_menu
+from rgbpi_tweaks import get_rgbpi_tweaks_menu
+from core_updates import get_core_updates_menu
 
 RGBPI_UI_ROOT = '/tmp'
 SUDOERS_FILE = '/tmp/010_pi-nopasswd'
@@ -20,22 +21,26 @@ patch_enabled = os.path.exists('{}/launcher2.pyc'.format(RGBPI_UI_ROOT))
 
 WINDOW_SIZE = (320, 240)
 
-surface = create_example_window('RGBPI Tweaks', WINDOW_SIZE, pygame.FULLSCREEN, pygame.JOYAXISMOTION)
+surface = create_example_window('RGB-Pi OS4 Tweaks', WINDOW_SIZE, pygame.FULLSCREEN, pygame.JOYAXISMOTION)
 
 pygame.event.set_blocked(pygame.MOUSEMOTION)
 pygame.mouse.set_visible(False)
 
 menu_theme = pygame_menu.themes.THEME_DARK.copy()
-menu_theme.background_color=(0, 0, 0, 255)
-menu_theme.title_offset = (20,20)
-menu_theme.title_font_size = 20
+menu_theme.background_color = (0, 0, 0, 255)
+menu_theme.title_offset = (20, 20)
+menu_theme.title_font_size = 16
 menu_theme.title_font = pygame_menu.font.FONT_MUNRO
 menu_theme.title_bar_style = pygame_menu.widgets.MENUBAR_STYLE_NONE
-menu_theme.widget_font_size = 15
+menu_theme.widget_font_size = 12
 menu_theme.widget_font = pygame_menu.font.FONT_MUNRO
+menu_theme.widget_alignment = pygame_menu.locals.ALIGN_LEFT
+menu_theme.scrollbar_color = (0, 0, 0, 255)
+menu_theme.scrollbar_slider_color = (0, 0, 0, 255)
+menu_theme.scrollbar_thick = (5)
 
 menu = pygame_menu.Menu(
-    title='RGBPI OS Tweaks',
+    title='RGB-Pi OS4 Tweaks',
     theme=menu_theme,
     joystick_enabled=True,
     width=WINDOW_SIZE[0],
@@ -43,17 +48,23 @@ menu = pygame_menu.Menu(
     mouse_visible_update=False,
 )
 
+idle_timeout = 240 #seconds
+last_input_time = pygame.time.get_ticks()
+
 def toggle_root(value) -> None:
+    global last_input_time
     try:
         if value:
             with open(SUDOERS_FILE, 'wt') as f:
                 f.write('pi ALL=(ALL) NOPASSWD: ALL')
         else:
             os.remove(SUDOERS_FILE)
+        last_input_time = pygame.time.get_ticks()
     except:
         value = not value
 
 def apply_patch():
+    global last_input_time
     error = None
     try:
         shutil.move('{}/launcher.pyc'.format(RGBPI_UI_ROOT), '{}/launcher2.pyc'.format(RGBPI_UI_ROOT))
@@ -65,8 +76,10 @@ def apply_patch():
         traceback.print_exc()
         error = 'patch'
     load_menu(error=error)
+    last_input_time = pygame.time.get_ticks()
 
 def load_menu(error=None):
+    global last_input_time
     menu.clear()
     if error:
         if error == 'patch':
@@ -79,8 +92,13 @@ def load_menu(error=None):
         if not patch_enabled:
             menu.add.button('Apply patch to launcher and reboot', apply_patch)
         else:
-            menu.add.button('Retroarch settings', get_retroarch_settings_menu(menu_theme, WINDOW_SIZE))
+            retroarch_settings_menu = get_retroarch_settings_menu(menu_theme, WINDOW_SIZE)
+            rgbpi_tweaks_menu = get_rgbpi_tweaks_menu(menu_theme, WINDOW_SIZE)
+            menu.add.button('Retroarch Settings', retroarch_settings_menu)
+            menu.add.button('Update Cores', get_core_updates_menu(menu_theme, WINDOW_SIZE))
+            menu.add.button('Tweaks', get_rgbpi_tweaks_menu(menu_theme, WINDOW_SIZE))
         menu.add.vertical_margin(margin=10)
+        
         menu.add.button('Quit', pygame_menu.events.EXIT)
 
 load_menu()
@@ -91,9 +109,11 @@ if __name__ == '__main__':
         for event in events:
             if event.type == pygame.QUIT:
                 exit()
-
         if menu.is_enabled():
             menu.update(events)
             menu.draw(surface)
-
+            # Check idle timeout
+            current_time = pygame.time.get_ticks()
+            if current_time - last_input_time > idle_timeout * 1000:
+                exit()
         pygame.display.update()
