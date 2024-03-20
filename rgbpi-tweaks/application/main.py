@@ -106,13 +106,13 @@ def apply_patch():
             for line in lines:
                 file.write(line)
                 if line.startswith('"arcade"'):
-                    file.write('"atari800","Atari 800",1979,"Atari",".a26|.rom|.zip|.7z",\n')
+                    file.write('"atari800","Atari 800",1979,"Atari",".a26|.rom|.zip|.7z|.sh",\n')
                 if line.startswith('"sega32x"'):
-                    file.write('"saturn","Sega Saturn",1994,"Sega",".cue|.iso|.ccd|.mds|.chd",\n')
+                    file.write('"saturn","Sega Saturn",1994,"Sega",".cue|.iso|.ccd|.mds|.chd|.sh",\n')
                 elif line.startswith('"psx"'):
-                    file.write('"psp","Sony PSP",2005,"Sony",".elf|.iso|.cso|.prx|.pbp|.chd",\n')
+                    file.write('"psp","Sony PSP",2005,"Sony",".elf|.iso|.cso|.prx|.pbp|.chd|.sh",\n')
                 elif line.startswith('"gba"'):
-                    file.write('"nds","Nintendo DS",2004,"Nintendo",".nds|.ids|.dsi",\n')
+                    file.write('"nds","Nintendo DS",2004,"Nintendo",".nds|.ids|.dsi|.sh",\n')
         
         os.system('reboot')
     except Exception as e:
