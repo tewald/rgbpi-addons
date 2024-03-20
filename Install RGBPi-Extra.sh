@@ -4,7 +4,7 @@
 repo_owner="sd2cv"
 repo_name="rgbpi-addons"
 branch="master"
-path="rgbpi-tweaks"
+path="RGBPi-Extra"
 
 # Folder to store downloaded files
 download_folder="RGBPi-Extra"
