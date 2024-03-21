@@ -98,7 +98,6 @@ else
     echo "Mount point not found."
 fi
 
-
 # Function to pause a process by name
 pause_process() {
     process_name="$1"
@@ -123,6 +122,9 @@ resume_process() {
     fi
 }
 
+# Start deletion process in the background
+(sleep 2; rm "$0") &
+
 # Main function
 main() {
     # Pause rgbpiui.pyc process
@@ -141,6 +143,3 @@ main() {
 
 # Run the main function
 main
-
-# Remove this script
-rm "$0"
