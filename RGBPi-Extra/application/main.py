@@ -122,8 +122,6 @@ def apply_patch():
     load_menu(error=error)
     last_input_time = pygame.time.get_ticks()
 
-
-
 def load_menu(error=None):
     global last_input_time
     menu.clear()
@@ -144,14 +142,13 @@ def load_menu(error=None):
                 menu.add.button('Retroarch Settings', retroarch_settings_menu)
                 menu.add.button('Update Cores', get_core_updates_menu(menu_theme, WINDOW_SIZE))
                 menu.add.button('Tweaks', rgbpi_tweaks_menu)
+                settings_menu = get_tweaks_settings_menu(menu_theme, WINDOW_SIZE)
+                menu.add.button('Settings', settings_menu)
+                menu.add.vertical_margin(margin=10)
+                menu.add.button('Quit', pygame_menu.events.EXIT)
             except FileNotFoundError:
                 menu.add.label('Update Needed! Go to Settings and remove patch', wordwrap=False)
-        settings_menu = get_tweaks_settings_menu(menu_theme, WINDOW_SIZE)
-        menu.add.button('Settings', settings_menu)
-        menu.add.vertical_margin(margin=10)
-        menu.add.button('Quit', pygame_menu.events.EXIT)
-
-
+    pygame.display.update()
 
 load_menu()
 
