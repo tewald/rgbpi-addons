@@ -1,7 +1,7 @@
 
 # RGBPi-addons and RGBPi-Extra
 
-This is a UI that allows you to apply a **collection of unofficial scripts for [RGBPiOS](https://www.rgb-pi.com/#os)** allowing you to quickly and easily **install emulators, ports and libretrocores** that haven't been included in RGBPi for one reason or another. These scripts can be considered experimental at best. The idea to create this came from [RetroPie-Extra](https://github.com/Exarkuniv/RetroPie-Extra)
+This is a UI that allows you to apply a **collection of unofficial scripts for [RGBPiOS](https://www.rgb-pi.com/#os)** allowing you to quickly and easily **install emulators, ports and libretrocores** that haven't been included in RGBPi for one reason or another. These scripts can be considered experimental at best. The idea to create this came from [RetroPie-Extra](https://github.com/Exarkuniv/RetroPie-Extra) and is a combination of work across multiple parties in the RGBPi community
 
 **THIS WILL ONLY WORK ON THE LATEST OS4 V27**
 
