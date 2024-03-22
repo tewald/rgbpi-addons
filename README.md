@@ -37,7 +37,6 @@ Pull requests and issue reports are accepted and encouraged as well as requests.
 
 After installing **RGBPi-Extra** you will now have a RGBPi-Extra folder within ports and within that the RGBPi-Extra launcher
 
-USAGE readme still in the works
 #### Retroarch Settings 
 This allows you to add retroarch features that are disabled by default by RGBPi-OS. Currently only boolean shows up in the UI, but you can add any global configs that you would like to /application/data/tweaks/gobal_configs.ini
 #### Update Cores
