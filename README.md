@@ -1,16 +1,20 @@
 
 # RGBPi-Extra
 
-RGBpi-Extra is a UI that allows you to apply a **collection of unofficial scripts for [RGBPiOS](https://www.rgb-pi.com/#os)** allowing you to quickly and easily **install emulators, ports and libretrocores** that haven't been included in RGBPi for one reason or another. These scripts can be considered experimental at best. The idea to create this repo came from [RetroPie-Extra](https://github.com/Exarkuniv/RetroPie-Extra) and is a combination of work across multiple parties in the RGBPi community
+**RGBpi-Extra**
+
+RGBpi-Extra is a UI that allows you to apply a collection of unofficial scripts for [RGBPiOS](https://www.rgb-pi.com/#os), enabling you to quickly and easily install emulators, ports, and libretrocores that haven't been included in RGBPi for various reasons. Additionally, it provides the capability to enable RetroArch features that are disabled by default. These scripts are experimental in nature and may not be fully stable. The concept for creating this repository was inspired by [RetroPie-Extra](https://github.com/Exarkuniv/RetroPie-Extra) and represents a collaborative effort across multiple parties within the RGBPi community.
+
 
 **THIS WILL ONLY WORK ON THE LATEST OS4 V27**
 
 I have found new scripts made by other people and added them to this Repo. I dont take credit for any of them, other then the ones I made. RGBPi OS uses a custom kernel driver and custom compiled version of retroarch. Pre-Compiled Cores from libretro, Retropie, batocera, lakka will not work (mostly). I have found that compiling cores on the RGBpi OS itself works best, but can still take some adjustments in the cmake flags.
 
-Notes:
-RGBPi OS runs on Bullseye
-It does not have xorg out of the box so any emulators that require it wont work
-applications that you egl/kms can work, but may be limited to 240p
+**Notes**
+
+- RGBPi OS runs on Bullseye
+- It does not have xorg out of the box so any emulators that require it wont work
+- applications that you egl/kms can work, but may be limited to 240p
 
 
 
@@ -19,16 +23,13 @@ I have changed the list below to show what has been tested to at least to instal
 
 Pull requests and issue reports are accepted and encouraged as well as requests. Feel free to use the issue tracker to send me any personal requests for new scripts that you may have.
 
-## Installation 
-Download [Install RGBPi-Extra.sh](https://github.com/sd2cv/rgbpi-addons/blob/master/Install%20RGBPi-Extra.sh)
+## Installation
 
-Place it in /roms/ports 
-
-Scan for games in the rgbpi ui
-
-Go to ports in rgbpi ui and select Install RGBPi-Extra. The screen will turn blank while downloading
-
-The RGBPi-Extra UI will appear allowing you to apply the patch and restart 
+1. Download [Install RGBPi-Extra.sh](https://github.com/sd2cv/rgbpi-addons/blob/master/Install%20RGBPi-Extra.sh)
+2. Place it in /roms/ports 
+3. Scan for games in the rgbpi ui
+4. Go to ports in rgbpi ui and select Install RGBPi-Extra. The screen will turn blank while downloading
+5. The RGBPi-Extra UI will appear allowing you to apply the patch and restart 
 
 ## Usage
 
