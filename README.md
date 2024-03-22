@@ -59,7 +59,7 @@ in progress
 
 To remove the patch open RGBPi-Extra ui, go to settings and select remove.
 
-# Systems still in progress so non of these are included in the current setup unless checked.
+# Systems still in progress so none of these are included in the current setup unless checked.
 
 If there is a [X] that means it Installs and Plays. 
 I'll have a note at the end with some Info about it. if there is NO note or  [ ] **PLEASE LET ME KNOW** if it works for you 
