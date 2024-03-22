@@ -21,9 +21,13 @@ Pull requests and issue reports are accepted and encouraged as well as requests.
 
 ## Installation 
 Download [Install RGBPi-Extra.sh](https://github.com/sd2cv/rgbpi-addons/blob/master/Install%20RGBPi-Extra.sh)
+
 Place it in /roms/ports 
+
 Scan for games in the rgbpi ui
+
 Go to ports in rgbpi ui and select Install RGBPi-Extra. The screen will turn blank while downloading
+
 The RGBPi-Extra UI will appear allowing you to apply the patch and restart 
 
 ## Usage
