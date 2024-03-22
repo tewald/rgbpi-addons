@@ -59,8 +59,8 @@ To remove the patch open RGBPi-Extra ui, go to settings and select remove.
 
 # Systems
 
-If there is a [ ] that means it Installs and Plays. 
-I'll have a note at the end with some Info about it. if there is NO note or  [ X ] **PLEASE LET ME KNOW** if it works for you 
+If there is a [X] that means it Installs and Plays. 
+I'll have a note at the end with some Info about it. if there is NO note or  [ ] **PLEASE LET ME KNOW** if it works for you 
 
 Since we are using CRTs not all cores/emulators will look good. This all depends on the native resolution and fps of the gamnes
 
