@@ -13,8 +13,10 @@ I have found new scripts made by other people and added them to this Repo. I don
 **Notes**
 
 - RGBPi OS runs on Bullseye
+- It uses a custom kernel driver for the GPIO output
+- It uses a custom retroarch build with dynares, dynares takes a sample of the rom fps and resolution and then adjusts the kernel driver framebuffer to match.
 - It does not have xorg out of the box so any emulators that require it wont work
-- applications that you egl/kms can work, but may be limited to 240p
+- applications that use egl/kms can work, but may be limited to 240p
 
 
 
