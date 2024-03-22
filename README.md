@@ -7,6 +7,7 @@ RGBpi-Extra is a UI that allows you to apply a collection of unofficial scripts 
 
 
 **THIS WILL ONLY WORK ON THE LATEST OS4 V27**
+**THIS IS NOT SUPPORTED BY RGBPI OS DEVS SO DONT ASK THEM ABOUT ANY ISSUES IF YOU HAVE INSTALLED THIS**
 
 I have found new scripts made by other people and added them to this Repo. I dont take credit for any of them, other then the ones I made. RGBPi OS uses a custom kernel driver and custom compiled version of retroarch. Pre-Compiled Cores from libretro, Retropie, batocera, lakka will not work (mostly). I have found that compiling cores on the RGBpi OS itself works best, but can still take some adjustments in the cmake flags.
 
