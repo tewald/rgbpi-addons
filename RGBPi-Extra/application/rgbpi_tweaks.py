@@ -1,6 +1,7 @@
 import os
 import pygame_menu
 import subprocess
+import time
 
 SCRIPTS_FOLDER = 'scripts'
 
@@ -13,6 +14,10 @@ def run_script(script_name, menu):
 
     # Make the script executable
     make_script_executable(script_path)
+
+    # Clear the framebuffer for 1 second
+    subprocess.Popen(['dd', 'if=/dev/zero', 'of=/dev/fb0'])
+    time.sleep(1)
 
     # Add your script execution logic here
     try:
