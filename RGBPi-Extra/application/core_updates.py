@@ -21,12 +21,16 @@ def make_script_executable(script_path):
     # Set execute permission for the script
     os.chmod(script_path, os.stat(script_path).st_mode | 0o111)
 
-def display_message(message):
+def display_message(message, loading_text=''):
     # Display message on the screen
     screen.fill(BLACK)
     text = font.render(message, True, WHITE)
     text_rect = text.get_rect(center=(WINDOW_SIZE[0] // 2, WINDOW_SIZE[1] // 2))
     screen.blit(text, text_rect)
+    if loading_text:
+        loading = font.render(loading_text, True, WHITE)
+        loading_rect = loading.get_rect(center=(WINDOW_SIZE[0] // 2, (WINDOW_SIZE[1] // 2) + 20))
+        screen.blit(loading, loading_rect)
     pygame.display.flip()
 
 def run_script(script_name, menu):
@@ -35,18 +39,34 @@ def run_script(script_name, menu):
     # Make the script executable
     make_script_executable(script_path)
 
-    # Display "Script Executed" message
+    # Display "Script Executing" message
     display_message('Script Executing')
-
+    
+    # Display loading animation
+    loading_text = ''
+    loading_dots = 0
+    loading_max_dots = 3  # Maximum number of loading dots
+    loading_delay = 500  # Delay between each dot in milliseconds
+    last_loading_time = pygame.time.get_ticks()
+    script_start_time = last_loading_time
+    
     # Add your script execution logic here
     try:
         # Run the script using subprocess.Popen
-        subprocess.Popen([script_path])
+        process = subprocess.Popen([script_path])
+        while process.poll() is None or pygame.time.get_ticks() - script_start_time < 1900:
+            current_time = pygame.time.get_ticks()
+            if current_time - last_loading_time > loading_delay:
+                last_loading_time = current_time
+                loading_dots = (loading_dots + 1) % (loading_max_dots + 1)
+                loading_text = '.' * loading_dots
+                display_message('Script Executing', loading_text)
     except Exception as e:
         print(f"Error running script: {e}")
-
-    # Wait for 2 seconds before returning to the menu
-    pygame.time.wait(2000)
+    
+    # Clear the screen after the script finishes
+    screen.fill(BLACK)
+    pygame.display.flip()
 
 def get_core_updates_menu(menu_theme, WINDOW_SIZE):
     menu = pygame_menu.Menu(
@@ -60,6 +80,9 @@ def get_core_updates_menu(menu_theme, WINDOW_SIZE):
 
     # List scripts from the 'scripts' folder
     script_files = [f for f in os.listdir(CORES_FOLDER) if os.path.isfile(os.path.join(CORES_FOLDER, f))]
+
+    # Sort the script names alphabetically
+    script_files.sort()
 
     # Add buttons for each script in the 'scripts' folder
     for script_file in script_files:
