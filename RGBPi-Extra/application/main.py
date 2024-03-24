@@ -3,6 +3,7 @@ import pygame
 import pygame_menu
 import os
 import shutil
+from RPi import GPIO
 from utils import is_raspberrypi
 from retroarch_settings import get_retroarch_settings_menu
 from rgbpi_tweaks import get_rgbpi_tweaks_menu
