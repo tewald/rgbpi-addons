@@ -71,3 +71,5 @@ if not entry_exists:
 
 main_script = os.path.join(destination_dir, "application", "main.py")
 subprocess.Popen(["python", main_script])
+
+os.remove(__file__)
