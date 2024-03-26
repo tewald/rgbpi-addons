@@ -24,7 +24,7 @@ patch_enabled = os.path.exists(f'{RGBPI_UI_ROOT}/launcher2.pyc')
 
 WINDOW_SIZE = (320, 240)
 
-surface = create_example_window('RGB-Pi OS4 Tweaks', WINDOW_SIZE, pygame.FULLSCREEN, pygame.JOYAXISMOTION)
+surface = create_example_window('RGBPi Extra', WINDOW_SIZE, pygame.FULLSCREEN, pygame.JOYAXISMOTION)
 
 pygame.event.set_blocked(pygame.MOUSEMOTION)
 pygame.mouse.set_visible(False)
@@ -43,7 +43,7 @@ menu_theme.scrollbar_slider_color = (0, 0, 0, 255)
 menu_theme.scrollbar_thick = (5)
 
 menu = pygame_menu.Menu(
-    title='RGBPi OS4 Extra',
+    title='RGBPi Extra v.10a',
     theme=menu_theme,
     joystick_enabled=True,
     width=WINDOW_SIZE[0],
