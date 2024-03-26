@@ -103,7 +103,7 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
 repo_owner = "sd2cv"
-repo_name = "rgbpi-addons"
+repo_name = "RGBPi-Extra"
 branch = "master"
 path = "RGBPi-Extra"
 
