@@ -42,19 +42,22 @@ Still in progress do not use this area
 #### Tweaks
 A collection of scripts to modify RGBPi OS settings, Bullseye settings or just general improvements
 #### Settings
-Currently just for removal of RGBPi-Extra, As of now to update RGBPi-Extra you will need to run the removal prior to updating.
+Update or Removal of RGBPi-Extra, As of now to update RGBPi-Extra you will need to run the removal prior to updating.
 
 IF YOU ARE REIMAGING YOUR SD CARD YOU MUST REMOVE RGBPI-EXTRA BEFORE DOING SO.
 
 
-## Updating
+## Updates
 
-in progress
+1. Go to settings
+2. Press update and allow the package to download
+3. Press patch and reboot
 
+Updates are currently implemented in a similar fashion to removing the RGBPi-Extras. The reasoning is that if anything happens during the download or patching process, your system is in a near vanilla state allowing it to work normally. 
 
 ## Remove
 
-To remove the patch open RGBPi-Extra ui, go to settings and select remove.
+To remove the patch open RGBPi-Extra ui, go to settings and select remove. This is required prior to reimaging your SD card if you are doing so.
 
 # Systems still in progress so none of these are included in the current setup unless checked.
 
