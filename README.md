@@ -65,6 +65,10 @@ To remove the patch open RGBPi-Extra ui, go to settings and select remove. This 
 
 # Systems still in progress, only checked cores are implemented. BIOS files are not included.
 
+
+https://github.com/sd2cv/RGBPi-Extra/assets/99993735/299e54a7-49aa-4ab0-867a-3126dff5cc3f
+
+
 If there is a [X] that means it Installs and Plays. 
 I'll have a note at the end with some Info about it. if there is NO note or  [ ] **PLEASE LET ME KNOW** if it works for you 
 
