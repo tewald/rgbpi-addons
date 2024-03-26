@@ -51,7 +51,7 @@ menu = pygame_menu.Menu(
     mouse_visible_update=False,
 )
 #Makes TweaksUI autoclose in 120 seconds
-idle_timeout = 120 #seconds
+idle_timeout = 960 #seconds
 last_input_time = pygame.time.get_ticks()
 
 def toggle_root(value) -> None:

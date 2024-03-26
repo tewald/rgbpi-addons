@@ -1,7 +1,9 @@
 import os
 import shutil
 import pygame_menu
+import subprocess
 import glob
+import sys 
 
 # Define the root directory of the RGB-Pi UI
 RGBPI_UI_ROOT = '/opt/rgbpi/ui'
@@ -79,6 +81,13 @@ def remove_patch():
     # Reboot system
     os.system('reboot')
 
+def update_and_restart():
+    # Run updater.py in a separate process
+    subprocess.Popen(['python', 'updater.py'])
+    
+    # Terminate the current process running the Pygame UI
+    sys.exit()
+    
 def get_tweaks_settings_menu(menu_theme, WINDOW_SIZE):
     menu = pygame_menu.Menu(
         title='',
@@ -89,6 +98,7 @@ def get_tweaks_settings_menu(menu_theme, WINDOW_SIZE):
         mouse_visible_update=False,
     )
 
+    menu.add.button('Update to latest version', update_and_restart)
     menu.add.button('Remove Patch and Reboot (This removes all tweaks)', remove_patch)
     menu.add.button('Return to menu', pygame_menu.events.BACK)
 
