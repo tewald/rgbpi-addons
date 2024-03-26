@@ -59,7 +59,7 @@ Updates are currently implemented in a similar fashion to removing the RGBPi-Ext
 
 To remove the patch open RGBPi-Extra ui, go to settings and select remove. This is required prior to reimaging your SD card if you are doing so.
 
-# Systems still in progress so none of these are included in the current setup unless checked.
+# Systems still in progress, only checked cores are implemented.
 
 If there is a [X] that means it Installs and Plays. 
 I'll have a note at the end with some Info about it. if there is NO note or  [ ] **PLEASE LET ME KNOW** if it works for you 
