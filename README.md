@@ -42,26 +42,29 @@ Still in progress do not use this area
 #### Tweaks
 A collection of scripts to modify RGBPi OS settings, Bullseye settings or just general improvements
 #### Settings
-Currently just for removal of RGBPi-Extra, As of now to update RGBPi-Extra you will need to run the removal prior to updating.
+Update or Removal of RGBPi-Extra, As of now to update RGBPi-Extra you will need to run the removal prior to updating.
 
 IF YOU ARE REIMAGING YOUR SD CARD YOU MUST REMOVE RGBPI-EXTRA BEFORE DOING SO.
 
 
-## Updating
+## Updates
 
-in progress
+1. Go to settings
+2. Press update and allow the package to download
+3. Press patch and reboot
 
+Updates are currently implemented in a similar fashion to removing the RGBPi-Extras. The reasoning is that if anything happens during the download or patching process, your system is in a near vanilla state allowing it to work normally. 
 
 ## Remove
 
-To remove the patch open RGBPi-Extra ui, go to settings and select remove.
+To remove the patch open RGBPi-Extra ui, go to settings and select remove. This is required prior to reimaging your SD card if you are doing so.
 
-# Systems still in progress so none of these are included in the current setup unless checked.
+# Systems still in progress, only checked cores are implemented.
 
 If there is a [X] that means it Installs and Plays. 
 I'll have a note at the end with some Info about it. if there is NO note or  [ ] **PLEASE LET ME KNOW** if it works for you 
 
-Since we are using CRTs not all cores/emulators will look good. This all depends on the native resolution and fps of the gamnes
+Since we are using CRTs not all cores/emulators will look good. This all depends on the native resolution and fps of the games
 
 #### Emulators 
 
@@ -95,7 +98,7 @@ Since we are using CRTs not all cores/emulators will look good. This all depends
 - [ ] - `lr-gearcoleco` - ColecoVision emulator - GearColeco port for libretro.
 - [ ] - `lr-lutro` - Lua engine - lua game framework (WIP) for libretro following the LÖVE API 
 - [ ] - `lr-mame2003_midway` - MAME 0.78 core with Midway games optimizations. 
-- [X] - `lr-melondsds` - NDS emu - MelonDS port for libretro **runs great, included in current patch**
+- [X] - `lr-melondsds` - NDS emu - MelonDS port for libretro - **runs great, included in current patch**
 - [X] - `lr-mesen-s` - Super Nintendo emu - Mesen-S port for libretro 
 - [ ] - `lr-mess-jaguar` - atari jaguar system emu
 - [ ] - `lr-mu` - Palm OS emu - Mu port for libretro 
@@ -111,7 +114,7 @@ Since we are using CRTs not all cores/emulators will look good. This all depends
 - [ ] - `lr-samecdi` - Philips CDI - same_cdi port for libretro
 - [ ] - `lr-simcoupe` - SAM Coupe emulator - SimCoupe port for libretro
 - [ ] - `lr-swanstation` - Playstation emulator - Duckstation fork for libretro
-- [X] - `lr-TIC-80` - Fantasy Game Emulator  **runs great, not included yet**
+- [X] - `lr-TIC-80` - Fantasy Game Emulator - **runs great, not included yet**
 - [ ] - `lr-thepowdertoy` - Sandbox physics game for libretro - 
 - [ ] - `lr-uzem` - Uzebox engine - Uzem port for libretro
 - [ ] - `lr-vemulator` - SEGA VMU emulator - 
