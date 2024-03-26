@@ -31,6 +31,10 @@ Pull requests and issue reports are accepted and encouraged as well as requests.
 4. Go to ports in rgbpi ui and run Install RGBPi-Extra
 5. The RGBPi-Extra UI will appear allowing you to apply the patch and restart. 
 
+
+https://github.com/sd2cv/RGBPi-Extra/assets/99993735/b93bdd93-611d-447b-bbbc-c6718d749679
+
+
 ## Usage
 
 After installing **RGBPi-Extra** you will now have a RGBPi-Extra folder within ports and within that the RGBPi-Extra launcher
