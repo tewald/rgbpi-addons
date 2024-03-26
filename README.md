@@ -18,11 +18,6 @@ I have found new scripts made by other people and added them to this Repo. I don
 
 
 
-
-I have changed the list below to show what has been tested to at least to install. I dont have all the games so I cant test them all 
-
-Pull requests and issue reports are accepted and encouraged as well as requests. Feel free to use the issue tracker to send me any personal requests for new scripts that you may have.
-
 ## Installation
 
 1. Download [Install RGBPi-Extra](https://github.com/sd2cv/rgbpi-addons/blob/master/Install%20RGBPi-Extra.sh)
