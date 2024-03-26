@@ -59,7 +59,7 @@ Updates are currently implemented in a similar fashion to removing the RGBPi-Ext
 
 To remove the patch open RGBPi-Extra ui, go to settings and select remove. This is required prior to reimaging your SD card if you are doing so.
 
-# Systems still in progress, only checked cores are implemented.
+# Systems still in progress, only checked cores are implemented. BIOS files are not included.
 
 If there is a [X] that means it Installs and Plays. 
 I'll have a note at the end with some Info about it. if there is NO note or  [ ] **PLEASE LET ME KNOW** if it works for you 
@@ -106,7 +106,7 @@ Since we are using CRTs not all cores/emulators will look good. This all depends
 - [ ] - `lr-openlara` - Tomb Raider engine - OpenLara port for libretro
 - [ ] - `lr-play` - PlayStation 2 emulator - Play port for libretro
 - [ ] - `lr-potator` -  Watara Supervision emulator based on Normmatt version - Potator port for libretro
-- [X] - `lr-ppsspp` - PlayStation Portable emu - PPSSPP port for libretro - **runs great, included in current patch**
+- [X] - `lr-ppsspp` - PlayStation Portable emu - PPSSPP port for libretro - **works well some grapahics missing, included in current patch**
 - [ ] - `lr-prboom-system` - For setting up DOOM as an emulated system, not a port.  - 
 - [ ] - `lr-race` - Neo Geo Pocket (Color) emulator - RACE! port for libretro. 
 - [ ] - `lr-reminiscence` - Flashback engine - Gregory Montoir’s Flashback emulator port for libretro
