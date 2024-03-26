@@ -98,7 +98,7 @@ Since we are using CRTs not all cores/emulators will look good. This all depends
 - [ ] - `lr-gearcoleco` - ColecoVision emulator - GearColeco port for libretro.
 - [ ] - `lr-lutro` - Lua engine - lua game framework (WIP) for libretro following the LÖVE API 
 - [ ] - `lr-mame2003_midway` - MAME 0.78 core with Midway games optimizations. 
-- [X] - `lr-melondsds` - NDS emu - MelonDS port for libretro **runs great, included in current patch**
+- [X] - `lr-melondsds` - NDS emu - MelonDS port for libretro - **runs great, included in current patch**
 - [X] - `lr-mesen-s` - Super Nintendo emu - Mesen-S port for libretro 
 - [ ] - `lr-mess-jaguar` - atari jaguar system emu
 - [ ] - `lr-mu` - Palm OS emu - Mu port for libretro 
@@ -114,7 +114,7 @@ Since we are using CRTs not all cores/emulators will look good. This all depends
 - [ ] - `lr-samecdi` - Philips CDI - same_cdi port for libretro
 - [ ] - `lr-simcoupe` - SAM Coupe emulator - SimCoupe port for libretro
 - [ ] - `lr-swanstation` - Playstation emulator - Duckstation fork for libretro
-- [X] - `lr-TIC-80` - Fantasy Game Emulator  **runs great, not included yet**
+- [X] - `lr-TIC-80` - Fantasy Game Emulator - **runs great, not included yet**
 - [ ] - `lr-thepowdertoy` - Sandbox physics game for libretro - 
 - [ ] - `lr-uzem` - Uzebox engine - Uzem port for libretro
 - [ ] - `lr-vemulator` - SEGA VMU emulator - 
