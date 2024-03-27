@@ -9,7 +9,7 @@ RGBpi-Extra is a UI that allows you to apply a collection of unofficial scripts 
 I have found new scripts made by other people and added them to this Repo. I dont take credit for any of them, other then the ones I made. RGBPi OS uses a custom kernel driver and custom compiled version of retroarch. Pre-Compiled Cores from libretro, Retropie, batocera, lakka will not work (mostly). I have found that compiling cores on the RGBpi OS itself works best, but can still take some adjustments in the cmake flags.
 
 **Notes**
-- THIS IS NOT SUPPORTED BY RGBPI OS DEVS SO DONT ASK THEM ABOUT ANY ISSUES IF YOU HAVE INSTALLED THIS. Please use [Discussions](https://github.com/sd2cv/RGBPi-Extra/discussions) or [Issues](https://github.com/sd2cv/RGBPi-Extra/issues) at the top
+- Please use [Discussions](https://github.com/sd2cv/RGBPi-Extra/discussions) or [Issues](https://github.com/sd2cv/RGBPi-Extra/issues) if you have questions issues
 - RGBPi OS runs on Bullseye aarch64
 - It uses a custom kernel driver for the GPIO output
 - It uses a custom retroarch build with dynares, dynares takes a sample of the rom fps and resolution and then adjusts the kernel driver framebuffer to match.
