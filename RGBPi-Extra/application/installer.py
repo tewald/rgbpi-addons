@@ -25,7 +25,7 @@ BLACK = (0, 0, 0)
 display_loading_screen(screen, font)
 
 repo_owner = "sd2cv"
-repo_name = "rgbpi-addons"
+repo_name = "RGBPi-Extra"
 branch = "master"
 path = "RGBPi-Extra"
 

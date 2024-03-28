@@ -9,7 +9,7 @@ RGBpi-Extra is a UI that allows you to apply a collection of unofficial scripts 
 I have found new scripts made by other people and added them to this Repo. I dont take credit for any of them, other then the ones I made. RGBPi OS uses a custom kernel driver and custom compiled version of retroarch. Pre-Compiled Cores from libretro, Retropie, batocera, lakka will not work (mostly). I have found that compiling cores on the RGBpi OS itself works best, but can still take some adjustments in the cmake flags.
 
 **Notes**
-- THIS IS NOT SUPPORTED BY RGBPI OS DEVS SO DONT ASK THEM ABOUT ANY ISSUES IF YOU HAVE INSTALLED THIS
+- Please use [Discussions](https://github.com/sd2cv/RGBPi-Extra/discussions) or [Issues](https://github.com/sd2cv/RGBPi-Extra/issues) if you have questions or issues
 - RGBPi OS runs on Bullseye aarch64
 - It uses a custom kernel driver for the GPIO output
 - It uses a custom retroarch build with dynares, dynares takes a sample of the rom fps and resolution and then adjusts the kernel driver framebuffer to match.
@@ -18,11 +18,6 @@ I have found new scripts made by other people and added them to this Repo. I don
 
 
 
-
-I have changed the list below to show what has been tested to at least to install. I dont have all the games so I cant test them all 
-
-Pull requests and issue reports are accepted and encouraged as well as requests. Feel free to use the issue tracker to send me any personal requests for new scripts that you may have.
-
 ## Installation
 
 1. Download [Install RGBPi-Extra](https://github.com/sd2cv/rgbpi-addons/blob/master/Install%20RGBPi-Extra.sh)
@@ -30,6 +25,10 @@ Pull requests and issue reports are accepted and encouraged as well as requests.
 3. Scan for new games in the rgbpi ui
 4. Go to ports in rgbpi ui and run Install RGBPi-Extra
 5. The RGBPi-Extra UI will appear allowing you to apply the patch and restart. 
+
+
+https://github.com/sd2cv/RGBPi-Extra/assets/99993735/b93bdd93-611d-447b-bbbc-c6718d749679
+
 
 ## Usage
 
@@ -59,7 +58,11 @@ Updates are currently implemented in a similar fashion to removing the RGBPi-Ext
 
 To remove the patch open RGBPi-Extra ui, go to settings and select remove. This is required prior to reimaging your SD card if you are doing so.
 
-# Systems still in progress, only checked cores are implemented.
+# Systems still in progress, only checked cores are implemented. BIOS files are not included.
+
+
+https://github.com/sd2cv/RGBPi-Extra/assets/99993735/299e54a7-49aa-4ab0-867a-3126dff5cc3f
+
 
 If there is a [X] that means it Installs and Plays. 
 I'll have a note at the end with some Info about it. if there is NO note or  [ ] **PLEASE LET ME KNOW** if it works for you 
@@ -106,7 +109,7 @@ Since we are using CRTs not all cores/emulators will look good. This all depends
 - [ ] - `lr-openlara` - Tomb Raider engine - OpenLara port for libretro
 - [ ] - `lr-play` - PlayStation 2 emulator - Play port for libretro
 - [ ] - `lr-potator` -  Watara Supervision emulator based on Normmatt version - Potator port for libretro
-- [X] - `lr-ppsspp` - PlayStation Portable emu - PPSSPP port for libretro - **runs great, included in current patch**
+- [X] - `lr-ppsspp` - PlayStation Portable emu - PPSSPP port for libretro - **works well some grapahics missing, included in current patch**
 - [ ] - `lr-prboom-system` - For setting up DOOM as an emulated system, not a port.  - 
 - [ ] - `lr-race` - Neo Geo Pocket (Color) emulator - RACE! port for libretro. 
 - [ ] - `lr-reminiscence` - Flashback engine - Gregory Montoir’s Flashback emulator port for libretro
