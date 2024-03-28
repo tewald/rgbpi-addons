@@ -13,9 +13,9 @@ I have found new scripts made by other people and added them to this Repo. I don
  **Notes**
 - Please use [Discussions](https://github.com/sd2cv/RGBPi-Extra/discussions) or [Issues](https://github.com/sd2cv/RGBPi-Extra/issues) if you have questions or issues. 
 - RGBPi OS runs on Bullseye aarch64
-- It uses a custom kernel driver for the GPIO output
-- It uses a custom retroarch build with dynares, dynares takes a sample of the rom fps and resolution and then adjusts the kernel driver framebuffer to match.
-- It does not have xorg out of the box so any emulators that require it wont work
+- It uses a [custom kernel driver](https://github.com/rtomasa/rpi-dpidac) for the GPIO output
+- It uses a [custom retroarch build](https://github.com/rtomasa/RetroArch) with dynares driver built in, dynares takes a sample of the rom fps and resolution and then adjusts the kernel driver framebuffer to match.
+- It does not have xorg out of the box so any emulators that require it wont work. You can install a LXQT desktop which will enable startx and xorg.
 - applications that use egl/kms can work, but may be limited to 240p
 
 
